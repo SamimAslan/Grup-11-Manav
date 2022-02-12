@@ -45,3 +45,16 @@ function  addShoppingBox(theTitle, imageSource, itemPrice) {
     `
     cardItemsContainer.append(container);
 }
+
+let deleteItemFromBox = document.getElementsByClassName("btn-danger")
+for (let index = 0; index < deleteItemFromBox.length; index++) {
+    const deleteButton = deleteItemFromBox[index];
+    deleteButton.addEventListener("click", deleteItems)
+    
+}
+
+function deleteItems (params) {
+    let paramsVariable = params.target.parentElement.parentElement.remove()
+    console.log(paramsVariable)
+    
+}
